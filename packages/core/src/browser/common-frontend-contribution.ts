@@ -756,22 +756,22 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
             commandId: CommonCommands.OPEN_VIEW.id
         });
 
-        registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
-            commandId: CommonCommands.SELECT_COLOR_THEME.id
-        });
-        registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
-            commandId: CommonCommands.SELECT_ICON_THEME.id
-        });
+        // registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
+        //     commandId: CommonCommands.SELECT_COLOR_THEME.id
+        // });
+        // registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
+        //     commandId: CommonCommands.SELECT_ICON_THEME.id
+        // });
 
-        registry.registerSubmenu(CommonMenus.MANAGE_SETTINGS_THEMES, nls.localizeByDefault('Themes'), { order: 'a50' });
-        registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
-            commandId: CommonCommands.SELECT_COLOR_THEME.id,
-            order: '0'
-        });
-        registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
-            commandId: CommonCommands.SELECT_ICON_THEME.id,
-            order: '1'
-        });
+        // registry.registerSubmenu(CommonMenus.MANAGE_SETTINGS_THEMES, nls.localizeByDefault('Themes'), { order: 'a50' });
+        // registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
+        //     commandId: CommonCommands.SELECT_COLOR_THEME.id,
+        //     order: '0'
+        // });
+        // registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
+        //     commandId: CommonCommands.SELECT_ICON_THEME.id,
+        //     order: '1'
+        // });
 
         registry.registerSubmenu(CommonMenus.VIEW_APPEARANCE_SUBMENU, nls.localizeByDefault('Appearance'));
 

@@ -23,9 +23,9 @@
 
 #theia-main-content-panel {
   background-image: url("../icons/Fulllogo.png");
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 15%;
+  background-size: 30%;
 }
 
 .unclosable-window-icon {
