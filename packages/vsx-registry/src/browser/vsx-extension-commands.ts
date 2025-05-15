@@ -58,11 +58,11 @@ export namespace VSXExtensionsCommands {
     export const COPY_EXTENSION_ID: Command = {
         id: 'vsxExtensions.copyExtensionId'
     };
-    export const SHOW_BUILTINS = Command.toDefaultLocalizedCommand({
-        id: 'vsxExtension.showBuiltins',
-        label: 'Show Built-in Extensions',
-        category: EXTENSIONS_CATEGORY,
-    });
+    // export const SHOW_BUILTINS = Command.toDefaultLocalizedCommand({
+    //     id: 'vsxExtension.showBuiltins',
+    //     label: 'Show Built-in Extensions',
+    //     category: EXTENSIONS_CATEGORY,
+    // });
     export const SHOW_INSTALLED = Command.toLocalizedCommand({
         id: 'vsxExtension.showInstalled',
         label: 'Show Installed Extensions',

@@ -23,8 +23,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background: var(--theia-input-background);
-  border-style: solid;
+  /* background: var(--theia-input-background);
+  border-style: solid; */
   border-width: var(--theia-border-width);
   border-color: var(--theia-input-background);
   border-radius: 2px;
@@ -87,6 +87,7 @@
 }
 
 .theia-vsx-extensions-search-bar .theia-input {
+  width: 50%;
   overflow: hidden;
   line-height: var(--theia-content-line-height);
   flex: 1;
@@ -338,11 +339,11 @@
   color: white;
 }
 
-.theia-vsx-extension-editor .header .details .title .identifier,
+/* .theia-vsx-extension-editor .header .details .title .identifier,
 .theia-vsx-extension-editor .header .details .title .preview,
 .theia-vsx-extension-editor .header .details .title .builtin {
   line-height: var(--theia-code-line-height);
-}
+} */
 
 .theia-vsx-extension-editor .header .details .title .identifier,
 .theia-vsx-extension-editor .header .details .title .preview {
@@ -352,12 +353,12 @@
   border-radius: calc(var(--theia-ui-padding) * 2 / 3);
 }
 
-.theia-vsx-extension-editor .header .details .title .preview,
+/* .theia-vsx-extension-editor .header .details .title .preview,
 .theia-vsx-extension-editor .header .details .title .builtin {
   font-size: var(--theia-ui-font-size0);
   font-style: italic;
   margin-left: calc(var(--theia-ui-padding) * 5 / 3);
-}
+} */
 
 .theia-vsx-extension-editor .header .details .subtitle {
   padding-top: var(--theia-ui-padding);

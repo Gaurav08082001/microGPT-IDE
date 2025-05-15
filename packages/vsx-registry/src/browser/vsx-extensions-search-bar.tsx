@@ -59,7 +59,7 @@ export class VSXExtensionsSearchBar extends ReactWidget {
                 defaultValue={this.searchModel.query}
                 spellCheck={false}
                 className='theia-input'
-                placeholder={nls.localize('theia/vsx-registry/searchPlaceholder', 'Search Extensions in {0}', 'Open VSX Registry')}
+                placeholder={nls.localize('theia/vsx-registry/searchPlaceholder', 'Search Extensions')}
                 onChange={this.updateQuery}>
             </input>
             {this.renderOptionContainer()}

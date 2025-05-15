@@ -18,14 +18,14 @@ import { inject, injectable } from '@theia/core/shared/inversify';
 import { Argv, Arguments } from '@theia/core/shared/yargs';
 import { CliContribution } from '@theia/core/lib/node/cli';
 import { PluginDeployerHandlerImpl } from '../../hosted/node/plugin-deployer-handler-impl';
-import { PluginType } from '../../common';
+// import { PluginType } from '../../common';
 
 @injectable()
 export class PluginMgmtCliContribution implements CliContribution {
 
     static LIST_PLUGINS = 'list-plugins';
     static SHOW_VERSIONS = '--show-versions';
-    static SHOW_BUILTINS = '--show-builtins';
+    // static SHOW_BUILTINS = '--show-builtins';
 
     @inject(PluginDeployerHandlerImpl)
     protected deployerHandler: PluginDeployerHandlerImpl;
@@ -37,25 +37,21 @@ export class PluginMgmtCliContribution implements CliContribution {
                 description: 'List the versions of the installed plugins',
                 type: 'boolean',
                 default: false,
-            }).option(PluginMgmtCliContribution.SHOW_BUILTINS, {
-                description: 'List the built-in plugins',
-                type: 'boolean',
-                default: false,
             }),
 
-            async yargs => {
-                const showVersions = yargs[PluginMgmtCliContribution.SHOW_VERSIONS];
-                const deployedIds = await this.deployerHandler.getDeployedBackendPlugins();
-                const pluginType = yargs[PluginMgmtCliContribution.SHOW_BUILTINS] ? PluginType.System : PluginType.User;
-                process.stdout.write('installed plugins:\n');
-                deployedIds.filter(plugin => plugin.type === pluginType).forEach(plugin => {
-                    if (showVersions) {
-                        process.stdout.write(`${plugin.metadata.model.id}@${plugin.metadata.model.version}\n`);
-                    } else {
-                        process.stdout.write(`${plugin.metadata.model.id}\n`);
-                    }
-                });
-            }
+            // async yargs => {
+            //     const showVersions = yargs[PluginMgmtCliContribution.SHOW_VERSIONS];
+            //     const deployedIds = await this.deployerHandler.getDeployedBackendPlugins();
+            //     const pluginType = yargs[PluginMgmtCliContribution.SHOW_BUILTINS] ? PluginType.System : PluginType.User;
+            //     process.stdout.write('installed plugins:\n');
+            //     deployedIds.filter(plugin => plugin.type === pluginType).forEach(plugin => {
+            //         if (showVersions) {
+            //             process.stdout.write(`${plugin.metadata.model.id}@${plugin.metadata.model.version}\n`);
+            //         } else {
+            //             process.stdout.write(`${plugin.metadata.model.id}\n`);
+            //         }
+            //     });
+            // }
         );
     }
 

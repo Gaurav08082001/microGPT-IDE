@@ -22,7 +22,7 @@ import debounce = require('@theia/core/shared/lodash.debounce');
 @injectable()
 export class VSXExtensionsSourceOptions {
     static INSTALLED = 'installed';
-    static BUILT_IN = 'builtin';
+    // static BUILT_IN = 'builtin';
     static SEARCH_RESULT = 'searchResult';
     static RECOMMENDED = 'recommended';
     readonly id: string;
@@ -60,11 +60,12 @@ export class VSXExtensionsSource extends TreeSource {
                     continue;
                 }
             }
-            if (this.options.id === VSXExtensionsSourceOptions.BUILT_IN) {
-                if (extension.builtin) {
-                    yield extension;
-                }
-            } else if (!extension.builtin) {
+            // if (this.options.id === VSXExtensionsSourceOptions.BUILT_IN) {
+            //     if (extension.builtin) {
+            //         yield extension;
+            //     }
+            // }
+            if (!extension.builtin) {
                 yield extension;
             }
         }

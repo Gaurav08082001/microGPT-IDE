@@ -756,22 +756,22 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
             commandId: CommonCommands.OPEN_VIEW.id
         });
 
-        // registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
-        //     commandId: CommonCommands.SELECT_COLOR_THEME.id
-        // });
-        // registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
-        //     commandId: CommonCommands.SELECT_ICON_THEME.id
-        // });
+        registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
+            commandId: CommonCommands.SELECT_COLOR_THEME.id
+        });
+        registry.registerMenuAction(CommonMenus.FILE_SETTINGS_SUBMENU_THEME, {
+            commandId: CommonCommands.SELECT_ICON_THEME.id
+        });
 
-        // registry.registerSubmenu(CommonMenus.MANAGE_SETTINGS_THEMES, nls.localizeByDefault('Themes'), { order: 'a50' });
-        // registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
-        //     commandId: CommonCommands.SELECT_COLOR_THEME.id,
-        //     order: '0'
-        // });
-        // registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
-        //     commandId: CommonCommands.SELECT_ICON_THEME.id,
-        //     order: '1'
-        // });
+        registry.registerSubmenu(CommonMenus.MANAGE_SETTINGS_THEMES, nls.localizeByDefault('Themes'), { order: 'a50' });
+        registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
+            commandId: CommonCommands.SELECT_COLOR_THEME.id,
+            order: '0'
+        });
+        registry.registerMenuAction(CommonMenus.MANAGE_SETTINGS_THEMES, {
+            commandId: CommonCommands.SELECT_ICON_THEME.id,
+            order: '1'
+        });
 
         registry.registerSubmenu(CommonMenus.VIEW_APPEARANCE_SUBMENU, nls.localizeByDefault('Appearance'));
 
@@ -1447,7 +1447,7 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
 
         const lightThemesSeparator = nls.localizeByDefault('light themes');
         const darkThemesSeparator = nls.localizeByDefault('dark themes');
-        const highContrastThemesSeparator = nls.localizeByDefault('high contrast themes');
+        // const highContrastThemesSeparator = nls.localizeByDefault('high contrast themes');
 
         for (const theme of this.themeService.getThemes().sort((a, b) => a.label.localeCompare(b.label))) {
             const themeItems: QuickPickItemOrSeparator[] = itemsByTheme[theme.type];
@@ -1460,9 +1460,10 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
                     label = lightThemesSeparator;
                 } else if (theme.type === 'dark') {
                     label = darkThemesSeparator;
-                } else {
-                    label = highContrastThemesSeparator;
                 }
+                // else {
+                //     label = highContrastThemesSeparator;
+                // }
                 themeItems.push({
                     type: 'separator',
                     label

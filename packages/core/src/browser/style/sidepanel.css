@@ -187,6 +187,7 @@
 .lm-Widget.theia-side-panel .lm-Widget,
 .lm-Widget .theia-sidepanel-toolbar {
   color: var(--theia-sideBar-foreground);
+  min-width: 200px;
 }
 
 .theia-app-sidebar-container {

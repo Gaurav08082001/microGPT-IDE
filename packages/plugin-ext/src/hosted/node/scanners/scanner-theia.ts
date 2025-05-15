@@ -518,7 +518,7 @@ export class TheiaPluginScanner extends AbstractPluginScanner {
             }
             const defaults = contribution.defaults;
             if (!defaults || typeof defaults !== 'object' || typeof defaults.light !== 'string' || typeof defaults.dark !== 'string' || typeof defaults.highContrast !== 'string') {
-                console.error("'configuration.colors.defaults' must be defined and must contain 'light', 'dark' and 'highContrast'");
+                console.error("'configuration.colors.defaults' must be defined and must contain 'light', 'dark'");
                 continue;
             }
             result.push({

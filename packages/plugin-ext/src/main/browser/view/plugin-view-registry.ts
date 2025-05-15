@@ -118,13 +118,13 @@ export class PluginViewRegistry implements FrontendApplicationContribution {
 
     private nextViewContainerId = 0;
 
-    private static readonly BUILTIN_VIEW_CONTAINERS = new Set<string>([
-        'explorer',
-        'scm',
-        'search',
-        'test',
-        'debug'
-    ]);
+    // private static readonly BUILTIN_VIEW_CONTAINERS = new Set<string>([
+    //     'explorer',
+    //     'scm',
+    //     'search',
+    //     'test',
+    //     'debug'
+    // ]);
 
     private static readonly ID_MAPPINGS: Map<string, string> = new Map([
         // VS Code Viewlets
@@ -382,10 +382,10 @@ export class PluginViewRegistry implements FrontendApplicationContribution {
     }
 
     registerView(viewContainerId: string, view: View): Disposable {
-        if (!PluginViewRegistry.BUILTIN_VIEW_CONTAINERS.has(viewContainerId)) {
-            // if it's not a built-in view container, it must be a contributed view container, see https://github.com/eclipse-theia/theia/issues/13249
-            viewContainerId = `workbench.view.extension.${viewContainerId}`;
-        }
+        // if (!PluginViewRegistry.BUILTIN_VIEW_CONTAINERS.has(viewContainerId)) {
+        //     // if it's not a built-in view container, it must be a contributed view container, see https://github.com/eclipse-theia/theia/issues/13249
+        //     viewContainerId = `workbench.view.extension.${viewContainerId}`;
+        // }
         if (this.views.has(view.id)) {
             console.warn('view with such id already registered: ', JSON.stringify(view));
             return Disposable.NULL;

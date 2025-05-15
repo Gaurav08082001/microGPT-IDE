@@ -167,7 +167,7 @@ export interface CustomEditorSelector {
 
 export enum CustomEditorPriority {
     default = 'default',
-    builtin = 'builtin',
+    // builtin = 'builtin',
     option = 'option',
 }
 

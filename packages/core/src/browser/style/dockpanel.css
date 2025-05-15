@@ -26,6 +26,7 @@
 
 .lm-DockPanel.lm-SplitPanel-child {
   padding: 0px;
+  width: 1200px;
 }
 
 .lm-DockPanel-widget {

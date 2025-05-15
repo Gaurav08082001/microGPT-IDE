@@ -110,8 +110,8 @@ export class VSXExtensionsWidget extends SourceTreeWidget implements BadgeWidget
         switch (this.options.id) {
             case VSXExtensionsSourceOptions.INSTALLED:
                 return nls.localizeByDefault('Installed');
-            case VSXExtensionsSourceOptions.BUILT_IN:
-                return nls.localizeByDefault('Built-in');
+            // case VSXExtensionsSourceOptions.BUILT_IN:
+            //     return nls.localizeByDefault('Built-in');
             case VSXExtensionsSourceOptions.RECOMMENDED:
                 return nls.localizeByDefault('Recommended');
             case VSXExtensionsSourceOptions.SEARCH_RESULT:

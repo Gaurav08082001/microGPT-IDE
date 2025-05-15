@@ -37,7 +37,7 @@ import { IGNORE_RECOMMENDATIONS_ID } from './recommended-extensions/recommended-
 import { VSXExtension, VSXExtensionsContextMenu } from './vsx-extension';
 import { VSXExtensionsCommands } from './vsx-extension-commands';
 import { VSXExtensionsModel } from './vsx-extensions-model';
-import { BUILTIN_QUERY, INSTALLED_QUERY, RECOMMENDED_QUERY } from './vsx-extensions-search-model';
+import { INSTALLED_QUERY, RECOMMENDED_QUERY } from './vsx-extensions-search-model';
 import { VSXExtensionsViewContainer } from './vsx-extensions-view-container';
 import { ApplicationServer } from '@theia/core/lib/common/application-protocol';
 import debounce = require('@theia/core/shared/lodash.debounce');
@@ -110,7 +110,7 @@ export class VSXExtensionsContribution extends AbstractViewContribution<VSXExten
 
         commands.registerCommand(VSXExtensionsCommands.INSTALL_ANOTHER_VERSION, {
             // Check downloadUrl to ensure we have an idea of where to look for other versions.
-            isEnabled: (extension: VSXExtension) => !extension.builtin && !!extension.downloadUrl,
+            // isEnabled: (extension: VSXExtension) => !extension.builtin && !!extension.downloadUrl,
             execute: async (extension: VSXExtension) => this.installAnotherVersion(extension),
         });
 
@@ -134,9 +134,9 @@ export class VSXExtensionsContribution extends AbstractViewContribution<VSXExten
             execute: (extension: VSXExtension) => this.copyExtensionId(extension)
         });
 
-        commands.registerCommand(VSXExtensionsCommands.SHOW_BUILTINS, {
-            execute: () => this.showBuiltinExtensions()
-        });
+        // commands.registerCommand(VSXExtensionsCommands.SHOW_BUILTINS, {
+        //     execute: () => this.showBuiltinExtensions()
+        // });
 
         commands.registerCommand(VSXExtensionsCommands.SHOW_INSTALLED, {
             execute: () => this.showInstalledExtensions()
@@ -377,10 +377,10 @@ export class VSXExtensionsContribution extends AbstractViewContribution<VSXExten
         }
     }
 
-    protected async showBuiltinExtensions(): Promise<void> {
-        await this.openView({ activate: true });
-        this.model.search.query = BUILTIN_QUERY;
-    }
+    // protected async showBuiltinExtensions(): Promise<void> {
+    //     await this.openView({ activate: true });
+    //     this.model.search.query = BUILTIN_QUERY;
+    // }
 
     protected async showInstalledExtensions(): Promise<void> {
         await this.openView({ activate: true });

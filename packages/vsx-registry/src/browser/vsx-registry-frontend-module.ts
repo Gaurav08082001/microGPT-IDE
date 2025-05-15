@@ -88,11 +88,11 @@ export default new ContainerModule((bind, unbind, isBound, rebind) => {
                 VSXExtensionsSourceOptions.SEARCH_RESULT,
                 VSXExtensionsSourceOptions.RECOMMENDED,
                 VSXExtensionsSourceOptions.INSTALLED,
-                VSXExtensionsSourceOptions.BUILT_IN,
+                // VSXExtensionsSourceOptions.BUILT_IN,
             ]) {
                 const widget = await widgetManager.getOrCreateWidget(VSXExtensionsWidget.ID, { id });
                 viewContainer.addWidget(widget, {
-                    initiallyCollapsed: id === VSXExtensionsSourceOptions.BUILT_IN
+                    // initiallyCollapsed: id === VSXExtensionsSourceOptions.BUILT_IN
                 });
             }
             return viewContainer;
