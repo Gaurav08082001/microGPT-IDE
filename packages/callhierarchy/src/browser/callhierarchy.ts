@@ -20,7 +20,7 @@ import { Range, SymbolKind, SymbolTag } from '@theia/core/shared/vscode-language
 
 export const CALLHIERARCHY_ID = 'callhierarchy';
 export const CALL_HIERARCHY_TOGGLE_COMMAND_ID = 'callhierarchy:toggle';
-export const CALL_HIERARCHY_LABEL = nls.localizeByDefault('Call Hierarchy');
+export const CALL_HIERARCHY_LABEL = nls.localizeByDefault('');
 
 export interface CallHierarchyItem {
     _sessionId?: string;

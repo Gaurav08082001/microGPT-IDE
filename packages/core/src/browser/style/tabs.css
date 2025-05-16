@@ -1,4 +1,4 @@
-/* -----------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 | Variables
 |----------------------------------------------------------------------------*/
 
@@ -11,8 +11,6 @@
   --theia-toolbar-active-transform-scale: 1.272019649;
   --theia-horizontal-toolbar-height: calc(var(--theia-private-horizontal-tab-height) + var(--theia-private-horizontal-tab-scrollbar-rail-height) / 2);
   --theia-dragover-tab-border-width: 2px;
-  /* VS Code standard colors */
-  --vscode-editor-foreground: #d4d4d4;
 }
 
 /*-----------------------------------------------------------------------------
@@ -65,42 +63,10 @@
 | Tabs in the center area (main and bottom)
 |----------------------------------------------------------------------------*/
 
-
 #theia-main-content-panel,
 #theia-main-content-panel .lm-Widget.lm-DockPanel-widget {
   background: var(--theia-editor-background);
 }
-
-/* IMPORTANT: Remove this block that was forcing all editor text to be the same color */
-/* #theia-main-content-panel .monaco-editor .view-lines,
-#theia-main-content-panel .monaco-editor .view-line,
-#theia-main-content-panel .monaco-editor .mtk1,
-#theia-main-content-panel .monaco-editor .mtk2,
-#theia-main-content-panel .monaco-editor span {
-  color: var(--vscode-editor-foreground);
-  background-image: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-} */
-
-/* VS Code syntax highlighting colors - keep these to enable syntax highlighting */
-.monaco-editor .mtk1 { color: #4a7faa; } /* Default */
-.monaco-editor .mtk2 { color: #c586c0; } /* Keywords */
-.monaco-editor .mtk3 { color: #9cdcfe; } /* Variables */
-.monaco-editor .mtk4 { color: #4ec9b0; } /* Types */
-.monaco-editor .mtk5 { color: #dcdcaa; } /* Functions */
-.monaco-editor .mtk6 { color: #ce9178; } /* Strings */
-.monaco-editor .mtk7 { color: #b5cea8; } /* Numbers */
-.monaco-editor .mtk8 { color: #569cd6; } /* Keywords */
-.monaco-editor .mtk9 { color: #608b4e; } /* Comments */
-/* Add more token colors as needed */
-.monaco-editor .mtk10 { color: #d7ba7d; } /* Metadata */
-.monaco-editor .mtk11 { color: #f44747; } /* Error */
-.monaco-editor .mtk12 { color: #d16969; } /* RegExp */
-.monaco-editor .mtk13 { color: #6796e6; } /* Operators */
-.monaco-editor .mtk14 { color: #808080; } /* Punctuation */
-.monaco-editor .mtk15 { color: #f44747; } /* Invalid */
-.monaco-editor .mtk16 { color: #d7ba7d; } /* Tags */
 
 #theia-main-content-panel .lm-DockPanel-handle[data-orientation="horizontal"] {
   border-left: var(--theia-border-width) solid var(--theia-editorGroup-border);
@@ -120,6 +86,10 @@
 
 #theia-main-content-panel .lm-TabBar:not(.theia-tabBar-active) .lm-TabBar-tab {
   color: var(--theia-tab-unfocusedInactiveForeground);
+}
+
+.lm-TabBar.theia-app-centers {
+  background: var(--theia-editorGroupHeader-tabsBackground);
 }
 
 .lm-TabBar.theia-app-centers::after {
@@ -488,12 +458,12 @@
   display: none;
 }
 
-.theia-tabBar-breadcrumb-row {
+/* .theia-tabBar-breadcrumb-row {
   width: 100%;
-}
+} */
 
 .lm-TabBar.theia-tabBar-multirow[data-orientation="horizontal"] {
-  /* min-height: calc(var(--theia-breadcrumbs-height) + var(--theia-horizontal-toolbar-height)); */
+  min-height: calc(var(--theia-breadcrumbs-height) + var(--theia-horizontal-toolbar-height));
   flex-direction: column;
 }
 

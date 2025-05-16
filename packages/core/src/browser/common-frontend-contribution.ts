@@ -1461,9 +1461,6 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
                 } else if (theme.type === 'dark') {
                     label = darkThemesSeparator;
                 }
-                // else {
-                //     label = highContrastThemesSeparator;
-                // }
                 themeItems.push({
                     type: 'separator',
                     label
@@ -2160,7 +2157,7 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
                     dark: '#3C3C3C',
                     light: '#DDDDDD',
                     hcDark: '#000000',
-                    hcLight: '#FFFFFF'
+                    hcLight: '#000000'
                 }, description: 'Title bar background when the window is active. Note that this color is currently only supported on macOS.'
             },
             {

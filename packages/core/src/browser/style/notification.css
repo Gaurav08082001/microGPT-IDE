@@ -21,8 +21,8 @@
 
 .notification-count-container {
   align-self: center;
-  /* background-color: var(--theia-badge-background); */
-  background-color: #1c1c28;
+  background-color: var(--theia-badge-background);
+  /* background-color: #1c1c28; */
   border-radius: 20px;
   color: var(--theia-badge-foreground);
   display: flex;

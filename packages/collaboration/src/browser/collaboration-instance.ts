@@ -632,8 +632,8 @@ export class CollaborationInstance implements Disposable {
                 content: "${peer.name}";
                 background: ${colorString};
                 color: ${this.collaborationColorService.requiresDarkFont(color)
-            ? this.collaborationColorService.dark
-            : this.collaborationColorService.light};
+                ? this.collaborationColorService.dark
+                : this.collaborationColorService.light};
                 z-index: ${(100 + this.colorIndex).toFixed()}
             }`
         );

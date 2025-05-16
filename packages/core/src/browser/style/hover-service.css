@@ -25,8 +25,8 @@
   font-family: var(--theia-ui-font-family);
   font-size: var(--theia-ui-font-size1);
   color: var(--theia-editorHoverWidget-foreground);
-  /* background-color: var(--theia-editorHoverWidget-background); */
-  background-color: #1c1c28;
+  background-color: var(--theia-editorHoverWidget-background);
+  /* background-color: #1c1c28; */
   border: 1px solid var(--theia-editorHoverWidget-border);
   padding: var(--theia-ui-padding);
   max-width: var(--theia-hover-max-width);

@@ -261,8 +261,8 @@ blockquote {
 }
 
 .action-label:hover {
-    /* background-color: var(--theia-toolbar-hoverBackground); */
-    background-color: #1c1c28;
+    background-color: var(--theia-toolbar-hoverBackground);
+    /* background-color: #1c1c28; */
 }
 
 .theia-button {
@@ -288,8 +288,8 @@ blockquote {
 .theia-button[disabled] {
     opacity: 0.6;
     color: var(--theia-button-disabledForeground);
-    /* background-color: var(--theia-button-disabledBackground); */
-    background-color: #1c1c28;
+    background-color: var(--theia-button-disabledBackground);
+    /* background-color: #1c1c28; */
     cursor: default;
 }
 

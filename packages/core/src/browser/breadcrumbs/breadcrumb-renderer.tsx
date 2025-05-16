@@ -16,7 +16,7 @@
 
 import * as React from 'react';
 import { injectable } from 'inversify';
-import { Breadcrumb, Styles } from './breadcrumbs-constants';
+import { Breadcrumb } from './breadcrumbs-constants';
 
 export const BreadcrumbRenderer = Symbol('BreadcrumbRenderer');
 export interface BreadcrumbRenderer {
@@ -30,7 +30,7 @@ export interface BreadcrumbRenderer {
 export class DefaultBreadcrumbRenderer implements BreadcrumbRenderer {
     render(breadcrumb: Breadcrumb, onMouseDown?: (breadcrumb: Breadcrumb, event: React.MouseEvent) => void): React.ReactNode {
         return <li key={breadcrumb.id} title={breadcrumb.longLabel}
-            className={Styles.BREADCRUMB_ITEM + (!onMouseDown ? '' : ' ' + Styles.BREADCRUMB_ITEM_HAS_POPUP)}
+            // className={Styles.BREADCRUMB_ITEM + (!onMouseDown ? '' : ' ' + Styles.BREADCRUMB_ITEM_HAS_POPUP)}
             onMouseDown={event => onMouseDown && onMouseDown(breadcrumb, event)}
             tabIndex={0}
             data-breadcrumb-id={breadcrumb.id}

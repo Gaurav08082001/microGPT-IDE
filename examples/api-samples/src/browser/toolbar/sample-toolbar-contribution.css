@@ -31,8 +31,8 @@
 
 #theia-sample-toolbar-contribution
   .icon-wrapper.action-label.item.enabled:hover {
-  /* background-color: var(--theia-toolbar-hoverBackground); */
-  background-color: #5555559f;
+  background-color: var(--theia-toolbar-hoverBackground);
+  /* background-color: #5555559f; */
 }
 
 #theia-sample-toolbar-contribution #easy-search-item-icon.codicon-search {

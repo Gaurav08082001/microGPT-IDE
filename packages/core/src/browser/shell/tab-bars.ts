@@ -953,7 +953,7 @@ export class ToolbarAwareTabBar extends ScrollableTabBar {
 
         this.breadcrumbsRenderer = this.breadcrumbsRendererFactory();
         this.breadcrumbsContainer = document.createElement('div');
-        this.breadcrumbsContainer.classList.add('theia-tabBar-breadcrumb-row');
+        // this.breadcrumbsContainer.classList.add('theia-tabBar-breadcrumb-row');
         this.breadcrumbsContainer.appendChild(this.breadcrumbsRenderer.host);
         this.node.appendChild(this.breadcrumbsContainer);
 

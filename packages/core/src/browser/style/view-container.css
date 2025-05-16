@@ -47,14 +47,14 @@
 }
 
 .lm-SplitPanel > .lm-SplitPanel-handle:hover::after {
-  /* background-color: var(--theia-sash-hoverBorder); */
-  background-color: #1c1c28;
+  background-color: var(--theia-sash-hoverBorder);
+  /* background-color: #1c1c28; */
   transition-delay: var(--theia-sash-hoverDelay);
 }
 
 .lm-SplitPanel > .lm-SplitPanel-handle:active::after {
-  /* background-color: var(--theia-sash-activeBorder); */
-  background-color: #1c1c28;
+  background-color: var(--theia-sash-activeBorder);
+  /* background-color: #1c1c28; */
   transition-delay: 0s !important;
 }
 

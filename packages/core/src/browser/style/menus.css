@@ -87,9 +87,9 @@
 }
 
 #theia-top-panel {
-  /* background: var(--theia-titleBar-activeBackground);
-  color: var(--theia-titleBar-activeForeground); */
-  background-color: #202025;
+  background: var(--theia-titleBar-activeBackground);
+  color: var(--theia-titleBar-activeForeground);
+  /* background-color: #202025; */
   display: flex;
   min-height: var(--theia-private-menubar-height);
   border-bottom: 1px solid var(--theia-titleBar-border);

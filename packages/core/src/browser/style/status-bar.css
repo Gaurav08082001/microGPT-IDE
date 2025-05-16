@@ -75,8 +75,8 @@ body.theia-no-open-workspace #theia-statusBar {
 }
 
 .theia-mod-offline #theia-statusBar {
-  /* background-color: var(--theia-statusBar-offlineBackground) !important; */
-  background-color: #2f2f46;
+  background-color: var(--theia-statusBar-offlineBackground) !important;
+  /* background-color: #2f2f46; */
 }
 
 .theia-mod-offline #theia-statusBar .area .element {

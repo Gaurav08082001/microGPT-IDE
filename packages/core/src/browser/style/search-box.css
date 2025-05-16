@@ -28,8 +28,8 @@
   right: var(--theia-search-box-spacing);
   box-shadow: var(--theia-border-width) var(--theia-border-width)
     var(--theia-widget-shadow);
-  /* background-color: var(--theia-listFilterWidget-background); */
-  background-color: #1c1c28;
+  background-color: var(--theia-listFilterWidget-background);
+  /* background-color: #1c1c28; */
 
   z-index: calc(var(--theia-tabbar-toolbar-z-index) + 1);
   border-radius: var(--theia-search-box-radius);

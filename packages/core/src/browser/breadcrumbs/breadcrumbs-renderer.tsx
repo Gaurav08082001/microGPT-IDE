@@ -169,12 +169,12 @@ export class BreadcrumbsRenderer extends ReactRenderer {
             this.popup = undefined;
         }
         if (openPopup) {
-            const { currentTarget } = event;
-            const breadcrumbElement = currentTarget.closest(`.${Styles.BREADCRUMB_ITEM}`);
-            if (breadcrumbElement) {
-                const { left: x, bottom: y } = breadcrumbElement.getBoundingClientRect();
-                this.breadcrumbsService.openPopup(breadcrumb, { x, y }).then(popup => { this.popup = popup; });
-            }
+            // const { currentTarget } = event;
+            // const breadcrumbElement = currentTarget.closest(`.${Styles.BREADCRUMB_ITEM}`);
+            // if (breadcrumbElement) {
+            //     const { left: x, bottom: y } = breadcrumbElement.getBoundingClientRect();
+            //     this.breadcrumbsService.openPopup(breadcrumb, { x, y }).then(popup => { this.popup = popup; });
+            // }
         }
     };
 }

@@ -176,8 +176,8 @@
 }
 
 .theia-TreeNodeSegment mark {
-  /* background-color: var(--theia-list-filterMatchBackground); */
-  background-color: #1c1c28;
+  background-color: var(--theia-list-filterMatchBackground);
+  /* background-color: #1c1c28; */
   color: var(--theia-list-inactiveSelectionForeground);
 }
 

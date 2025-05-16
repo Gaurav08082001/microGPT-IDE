@@ -64,9 +64,9 @@
 .lm-TabBar.theia-app-sides .lm-TabBar-tab.lm-mod-current,
 .lm-TabBar.theia-app-sides .lm-TabBar-tab:hover {
   color: var(--theia-activityBar-foreground);
-  /* background-color: var(--theia-activityBar-activeBackground); */
+  background-color: var(--theia-activityBar-activeBackground);
   /* background-color: #5555559f; */
-  background-color: rgb(66, 66, 66);
+  /* background-color: rgb(66, 66, 66); */
 
   min-height: var(--theia-private-sidebar-tab-height);
   height: var(--theia-private-sidebar-tab-height);
@@ -79,10 +79,9 @@
 }
 
 /* Removing right sidebar styles */
-/* .lm-TabBar.theia-app-right .lm-TabBar-tab.lm-mod-current {
-  border-top-color: transparent;
-  box-shadow: -2px 0 0 var(--theia-activityBar-activeBorder) inset;
-} */
+.lm-TabBar.theia-app-right .lm-TabBar-tab.lm-mod-current {
+  display: none;
+}
 
 .lm-TabBar.theia-app-sides .lm-TabBar-tabLabel,
 .lm-TabBar.theia-app-sides .lm-TabBar-tabCloseIcon {
@@ -112,8 +111,8 @@
 
 /* inactive legacy/plugin icons */
 .lm-TabBar.theia-app-sides .lm-TabBar-tabIcon:not(.codicon) {
-  /* background: var(--theia-activityBar-inactiveForeground); */
-  background-color: #1c1c28;
+  background: var(--theia-activityBar-inactiveForeground);
+  /* background-color: #1c1c28; */
 }
 
 /* inactive file icons */
@@ -135,10 +134,10 @@
 /* active legacy/plugin icons */
 .lm-TabBar.theia-app-sides .lm-TabBar-tabIcon:not(.codicon):hover,
 .lm-TabBar.theia-app-sides .lm-mod-current .lm-TabBar-tabIcon:not(.codicon) {
-  /* background-color: var(--theia-activityBar-foreground); */
+  background-color: var(--theia-activityBar-foreground);
   /* background-color: #5555559f; */
   /* background-color: rgb(66, 66, 66); */
-  background-color: #1c1c28;
+  /* background-color: #1c1c28; */
 }
 
 .lm-TabBar.theia-app-left .lm-TabBar-tabLabel {
@@ -147,10 +146,10 @@
 }
 
 /* Removing right sidebar styles */
-/* .lm-TabBar.theia-app-right .lm-TabBar-tabLabel {
+.lm-TabBar.theia-app-right .lm-TabBar-tabLabel {
   transform-origin: top left 0;
   transform: rotate(90deg) translateY(-50%);
-} */
+}
 
 #theia-left-content-panel.theia-mod-collapsed {
   max-width: var(--theia-private-sidebar-tab-width);
@@ -178,9 +177,9 @@
 } */
 
 .theia-side-panel {
-  /* background-color: var(--theia-sideBar-background); */
+  background-color: var(--theia-sideBar-background);
   /* background-color: #5555559f; */
-  background-color: #1c1c28;
+  /* background-color: #1c1c28; */
     /* background: linear-gradient(to right, #050220, #16131a);  */
 }
 
@@ -207,9 +206,9 @@
 }
 
 .lm-Widget.theia-sidebar-menu {
-  /* background-color: var(--theia-activityBar-background); */
+  background-color: var(--theia-activityBar-background);
   /* background-color: #5555559f; */
-  background-color: #1c1c28;
+  /* background-color: #1c1c28; */
 
   display: flex;
   flex-direction: column-reverse;
@@ -349,9 +348,9 @@
 }
 
 /* Removing right sidebar hidden content styles */
-/* .lm-TabBar.theia-app-right > .theia-TabBar-hidden-content .lm-TabBar-tabLabel {
-  transform: none;
-} */
+.lm-TabBar.theia-app-right > .theia-TabBar-hidden-content .lm-TabBar-tabLabel {
+  display:none;
+}
 
 /*-----------------------------------------------------------------------------
 | Sidepanel Toolbar
