@@ -79,15 +79,15 @@ export class TreeStylingParticipant implements StylingParticipant {
 @injectable()
 export class BreadcrumbStylingParticipant implements StylingParticipant {
     registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
-        // const contrastBorder = theme.getColor('contrastBorder');
+        const contrastBorder = theme.getColor('contrastBorder');
 
-        // if (isHighContrast(theme.type) && contrastBorder) {
-        //     collector.addRule(`
-        //         .theia-tabBar-breadcrumb-row {
-        //             outline: 1px solid ${contrastBorder};
-        //         }
-        //     `);
-        // }
+        if (isHighContrast(theme.type) && contrastBorder) {
+            collector.addRule(`
+                .theia-tabBar-breadcrumb-row {
+                    outline: 1px solid ${contrastBorder};
+                }
+            `);
+        }
     }
 }
 

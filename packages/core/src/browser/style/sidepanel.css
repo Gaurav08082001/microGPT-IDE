@@ -78,9 +78,10 @@
   box-shadow: 2px 0 0 var(--theia-activityBar-activeBorder) inset;
 }
 
-/* Removing right sidebar styles */
-.lm-TabBar.theia-app-right .lm-TabBar-tab.lm-mod-current {
-  display: none;
+/* Completely remove right sidebar */
+.lm-TabBar.theia-app-right {
+  display: none !important;
+  width: 0 !important;
 }
 
 .lm-TabBar.theia-app-sides .lm-TabBar-tabLabel,
@@ -126,7 +127,7 @@
 }
 
 /* active icons */
-.lm-TabBar.theia-app-sides .lm-TabBar-tabIcon:hover,
+.lm-TabBar.lm-TabBar-tabIcon:hover,
 .lm-TabBar.theia-app-sides .lm-mod-current .lm-TabBar-tabIcon {
   color: var(--theia-activityBar-foreground);
 }
@@ -145,36 +146,28 @@
   transform: rotate(-90deg) translateX(-100%);
 }
 
-/* Removing right sidebar styles */
-.lm-TabBar.theia-app-right .lm-TabBar-tabLabel {
-  transform-origin: top left 0;
-  transform: rotate(90deg) translateY(-50%);
-}
-
 #theia-left-content-panel.theia-mod-collapsed {
   max-width: var(--theia-private-sidebar-tab-width);
 }
 
-/* Hide right content panel */
+/* Completely remove right content panel with !important to override any layout JS */
 #theia-right-content-panel {
-  display: none;
+  display: none !important;
+  width: 0 !important;
+  max-width: 0 !important;
+  min-width: 0 !important;
 }
 
-/* Removing right content panel styles */
-/* #theia-right-content-panel.theia-mod-collapsed {
-  max-width: var(--theia-private-sidebar-tab-width);
-} */
+/* Set any right side handles to 0 width */
+.lm-SplitPanel-handle[data-orientation="vertical"]:last-of-type {
+  width: 0 !important;
+  display: none !important;
+}
 
 #theia-left-content-panel > .lm-Panel {
   border-right: var(--theia-panel-border-width) solid
     var(--theia-activityBar-border);
 }
-
-/* Removing right content panel border styles */
-/* #theia-right-content-panel > .lm-Panel {
-  border-left: var(--theia-panel-border-width) solid
-    var(--theia-activityBar-border);
-} */
 
 .theia-side-panel {
   background-color: var(--theia-sideBar-background);
@@ -195,6 +188,12 @@
   background: var(--theia-activityBar-background);
   display: flex;
   flex-direction: column;
+}
+
+/* Hide right sidebar container */
+.theia-app-sidebar-container:nth-of-type(2) {
+  display: none !important;
+  width: 0 !important;
 }
 
 .theia-app-sidebar-container .theia-app-sides {
@@ -347,9 +346,9 @@
   transform: none;
 }
 
-/* Removing right sidebar hidden content styles */
-.lm-TabBar.theia-app-right > .theia-TabBar-hidden-content .lm-TabBar-tabLabel {
-  display:none;
+/* Hide all right sidebar hidden content */
+.lm-TabBar.theia-app-right > .theia-TabBar-hidden-content {
+  display: none !important;
 }
 
 /*-----------------------------------------------------------------------------
